@@ -163,17 +163,18 @@ export default function Footer() {
                   {t("footer.contactInfo.email.label")}
                 </h4>
                 <a
-                  href="mailto:info@briskwellinternational.com"
-                  className="block text-white/90 hover:text-spice-secondary transition-colors mb-1"
-                >
-                  {t("footer.contactInfo.email.primary")}
-                </a>
-                <a
                   href="mailto:briskwellinternational@gmail.com"
                   className="block text-white/90 hover:text-spice-secondary transition-colors"
                 >
                   {t("footer.contactInfo.email.secondary")}
                 </a>
+                <a
+                  href="mailto:info@briskwellinternational.com"
+                  className="block text-white/90 hover:text-spice-secondary transition-colors mb-1"
+                >
+                  {t("footer.contactInfo.email.primary")}
+                </a>
+               
               </div>
             </div>
           </div>
