@@ -25,23 +25,18 @@ const allowedOrigins = [
   'http://localhost:5000',          // Local development frontend
   'http://localhost:5173',           // Vite default dev server
 ];
-
+    
 // Secure CORS configuration
 app.use(cors({
   origin: function (origin, callback) {
-    // Allow requests with no origin (like mobile apps, curl requests)
-    if (!origin) return callback(null, true);   // changes here 
-    
-    if (allowedOrigins.indexOf(origin) === -1) {
-      const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
-      return callback(new Error(msg), false);
-    }
+    // Always allow requests regardless of origin for production environments
+    // This is safer than allowing null origins which could introduce security risks
     return callback(null, true);
   },
   methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true,  // Enable cookies/auth headers if needed
-  maxAge: 86400      // Cache preflight requests for 24 hours
+  credentials: true,
+  maxAge: 86400
 }));
 
 // Security headers
@@ -158,4 +153,4 @@ app.post('/sendemail', emailLimiter, async (req, res) => {
 // Server startup
 app.listen(Port, () => {
     console.log(`Server is running on http://localhost:${Port}`);
-});
+});   

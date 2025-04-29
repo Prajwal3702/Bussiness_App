@@ -2,20 +2,20 @@
 const config = {
   // API Configuration
   api: {
-    url: import.meta.env.VITE_API_URL || 'http://localhost:5000',
+    url: import.meta.env.VITE_API_URL ,
   },
   
   // Business Information
   business: {
     name: 'Briskwell International',
-    email: 'info@briskwell.com',
-    phone: '+91-123-456-7890',
+    email: 'info@briskwellinternational.com',
+    phone: '+919922990829',
     address: {
-      street: '123 Business Avenue', 
-      area: 'Industrial Area',
-      city: 'Mumbai',
+      street: 'A602, Lotus Sanskruti, bldg 2', 
+      area: 'Malawalenager 2, Mukai chowk',
+      city: 'Ravet- Kiwale',
       country: 'India',
-      postalCode: '400001'
+      postalCode: '412101'
     }
   },
   
